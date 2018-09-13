@@ -10,8 +10,18 @@ import UIKit
 
 class RepositorysTableViewController: UITableViewController {
 
-    var repositories: [RepositoryModel] = []
+    var presenter: MainPresenter!
+    
     let refresh = UIRefreshControl()
+    
+    init(with presenter: MainPresenter) {
+        super.init(nibName: nil, bundle: nil)
+        self.presenter = presenter
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +29,7 @@ class RepositorysTableViewController: UITableViewController {
         
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        getList(sines: nil)
+        getListRepositories()
         
         
         refresh.addTarget(self, action: #selector(refreshTableView), for: .valueChanged)
@@ -45,13 +55,13 @@ class RepositorysTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return repositories.count
+        return presenter.getCountRepositories()
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = RepositoryTableViewCell()
-        let repository = repositories[indexPath.row]
+        let repository = presenter.getRepository(indexPath.row)
         
         cell.nameLabel.text = repository.name
         cell.idLabel.text = repository.id.description
@@ -65,7 +75,7 @@ class RepositorysTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let repository = repositories[indexPath.row]
+        let repository = presenter.getRepository(indexPath.row)
         let detailVC = DetailRepositoryViewController()
         detailVC.repository = repository
         
@@ -73,23 +83,23 @@ class RepositorysTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let lastItem = repositories.count - 1
-        let lastItemId = repositories[indexPath.row].id
+        let lastItem = presenter.getLastNumberRepositories()
         if indexPath.row == lastItem {
-            getList(sines: lastItemId)
+            getListRepositories()
         }
     }
     
     
     @objc func refreshTableView(){
-        getList(sines: nil)
-    }
-    
-    func getList(sines: Int?){
-        Api.shared.getRepositories(sines: sines) { (repositories) in
-            self.repositories = self.repositories + repositories
+        presenter.getListRepositroriesWithoutSines {
             self.tableView.reloadData()
             self.refresh.endRefreshing()
+        }
+    }
+    
+    func getListRepositories(){
+        presenter.getListRepositories {
+            self.tableView.reloadData()
         }
     }
  

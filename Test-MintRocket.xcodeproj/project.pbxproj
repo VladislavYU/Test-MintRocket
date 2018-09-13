@@ -17,6 +17,7 @@
 		86F365C6214A663C006E2D17 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F365C5214A663C006E2D17 /* RepositoryModel.swift */; };
 		86F365C9214A672A006E2D17 /* DetailRepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F365C8214A672A006E2D17 /* DetailRepositoryViewController.swift */; };
 		86F365CB214A68D8006E2D17 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F365CA214A68D8006E2D17 /* Api.swift */; };
+		86F365CD214A9629006E2D17 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F365CC214A9629006E2D17 /* MainPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		86F365C5214A663C006E2D17 /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
 		86F365C8214A672A006E2D17 /* DetailRepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRepositoryViewController.swift; sourceTree = "<group>"; };
 		86F365CA214A68D8006E2D17 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		86F365CC214A9629006E2D17 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		947D46BDBBF23544AF25C7D8 /* Pods-Test-MintRocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-MintRocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-Test-MintRocket/Pods-Test-MintRocket.release.xcconfig"; sourceTree = "<group>"; };
 		B35C6673F2ABD96B6261E790 /* Pods_Test_MintRocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test_MintRocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -109,9 +111,9 @@
 		86F365C1214A538B006E2D17 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				86F365CE214A9CF9006E2D17 /* Network */,
 				86F365C4214A6620006E2D17 /* Models */,
-				86F365C2214A53AB006E2D17 /* MoyaService.swift */,
-				86F365CA214A68D8006E2D17 /* Api.swift */,
+				86F365CC214A9629006E2D17 /* MainPresenter.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -122,6 +124,15 @@
 				86F365C5214A663C006E2D17 /* RepositoryModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		86F365CE214A9CF9006E2D17 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				86F365C2214A53AB006E2D17 /* MoyaService.swift */,
+				86F365CA214A68D8006E2D17 /* Api.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		E4ADD7761C16BA97E57FDBAB /* Frameworks */ = {
@@ -252,6 +263,7 @@
 				86F365AA214A3EA9006E2D17 /* AppDelegate.swift in Sources */,
 				86F365C9214A672A006E2D17 /* DetailRepositoryViewController.swift in Sources */,
 				86F365BE214A4DA6006E2D17 /* RepositorysTableViewController.swift in Sources */,
+				86F365CD214A9629006E2D17 /* MainPresenter.swift in Sources */,
 				86F365CB214A68D8006E2D17 /* Api.swift in Sources */,
 				86F365C3214A53AB006E2D17 /* MoyaService.swift in Sources */,
 			);
