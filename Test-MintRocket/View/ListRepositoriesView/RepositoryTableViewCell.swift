@@ -20,7 +20,7 @@ class RepositoryTableViewCell: UITableViewCell {
     var nameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.boldSystemFont(ofSize: 17)
+        label.font = UIFont.boldSystemFont(ofSize: 18)
         
         return label
     }()

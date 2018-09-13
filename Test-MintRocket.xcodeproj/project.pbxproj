@@ -80,6 +80,7 @@
 		86F365A8214A3EA9006E2D17 /* Test-MintRocket */ = {
 			isa = PBXGroup;
 			children = (
+				86F365CF214AAA00006E2D17 /* Preseter */,
 				86F365C1214A538B006E2D17 /* Interactor */,
 				86F365BB214A4D4B006E2D17 /* View */,
 				86F365A9214A3EA9006E2D17 /* AppDelegate.swift */,
@@ -113,7 +114,6 @@
 			children = (
 				86F365CE214A9CF9006E2D17 /* Network */,
 				86F365C4214A6620006E2D17 /* Models */,
-				86F365CC214A9629006E2D17 /* MainPresenter.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -133,6 +133,14 @@
 				86F365CA214A68D8006E2D17 /* Api.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		86F365CF214AAA00006E2D17 /* Preseter */ = {
+			isa = PBXGroup;
+			children = (
+				86F365CC214A9629006E2D17 /* MainPresenter.swift */,
+			);
+			path = Preseter;
 			sourceTree = "<group>";
 		};
 		E4ADD7761C16BA97E57FDBAB /* Frameworks */ = {
