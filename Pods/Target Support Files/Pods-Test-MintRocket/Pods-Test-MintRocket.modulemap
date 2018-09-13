@@ -1,0 +1,6 @@
+framework module Pods_Test_MintRocket {
+  umbrella header "Pods-Test-MintRocket-umbrella.h"
+
+  export *
+  module * { export * }
+}
