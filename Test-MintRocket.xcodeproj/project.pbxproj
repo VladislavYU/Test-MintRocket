@@ -18,6 +18,7 @@
 		86F365C9214A672A006E2D17 /* DetailRepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F365C8214A672A006E2D17 /* DetailRepositoryViewController.swift */; };
 		86F365CB214A68D8006E2D17 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F365CA214A68D8006E2D17 /* Api.swift */; };
 		86F365CD214A9629006E2D17 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F365CC214A9629006E2D17 /* MainPresenter.swift */; };
+		86F365D2214AB1D0006E2D17 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F365D1214AB1D0006E2D17 /* AppRoute.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		86F365C8214A672A006E2D17 /* DetailRepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRepositoryViewController.swift; sourceTree = "<group>"; };
 		86F365CA214A68D8006E2D17 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		86F365CC214A9629006E2D17 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		86F365D1214AB1D0006E2D17 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
 		947D46BDBBF23544AF25C7D8 /* Pods-Test-MintRocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-MintRocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-Test-MintRocket/Pods-Test-MintRocket.release.xcconfig"; sourceTree = "<group>"; };
 		B35C6673F2ABD96B6261E790 /* Pods_Test_MintRocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test_MintRocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -80,6 +82,7 @@
 		86F365A8214A3EA9006E2D17 /* Test-MintRocket */ = {
 			isa = PBXGroup;
 			children = (
+				86F365D0214AB1BB006E2D17 /* Route */,
 				86F365CF214AAA00006E2D17 /* Preseter */,
 				86F365C1214A538B006E2D17 /* Interactor */,
 				86F365BB214A4D4B006E2D17 /* View */,
@@ -141,6 +144,14 @@
 				86F365CC214A9629006E2D17 /* MainPresenter.swift */,
 			);
 			path = Preseter;
+			sourceTree = "<group>";
+		};
+		86F365D0214AB1BB006E2D17 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				86F365D1214AB1D0006E2D17 /* AppRoute.swift */,
+			);
+			path = Route;
 			sourceTree = "<group>";
 		};
 		E4ADD7761C16BA97E57FDBAB /* Frameworks */ = {
@@ -268,6 +279,7 @@
 			files = (
 				86F365C0214A4F7C006E2D17 /* RepositoryTableViewCell.swift in Sources */,
 				86F365C6214A663C006E2D17 /* RepositoryModel.swift in Sources */,
+				86F365D2214AB1D0006E2D17 /* AppRoute.swift in Sources */,
 				86F365AA214A3EA9006E2D17 /* AppDelegate.swift in Sources */,
 				86F365C9214A672A006E2D17 /* DetailRepositoryViewController.swift in Sources */,
 				86F365BE214A4DA6006E2D17 /* RepositorysTableViewController.swift in Sources */,

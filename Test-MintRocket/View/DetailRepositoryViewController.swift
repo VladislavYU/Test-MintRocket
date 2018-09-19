@@ -12,7 +12,7 @@ class DetailRepositoryViewController: UIViewController, UIWebViewDelegate {
 
     var repository: RepositoryModel!
     
-    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
     let webView: UIWebView = {
         let view = UIWebView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -26,6 +26,8 @@ class DetailRepositoryViewController: UIViewController, UIWebViewDelegate {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(share))
         
         webView.delegate = self
+        
+        activityIndicator.color = .gray
         activityIndicator.center = view.center
         activityIndicator.startAnimating()
         webView.loadRequest(URLRequest(url: URL(string: repository.htmlUrl)!))

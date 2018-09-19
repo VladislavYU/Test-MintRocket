@@ -28,6 +28,7 @@ class RepositorysTableViewController: UITableViewController {
 
         
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.register(RepositoryTableViewCell.self, forCellReuseIdentifier: "Repository")
         
         getListRepositories()
         
@@ -60,7 +61,7 @@ class RepositorysTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = RepositoryTableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Repository") as! RepositoryTableViewCell
         let repository = presenter.getRepository(indexPath.row)
         
         cell.nameLabel.text = repository.name
